@@ -28,19 +28,67 @@ get_header();
                     <h3 class="text-blue-400">Key Facts</h3>
                     <div class="sidebar__grid">
                     <?php
-                    if (get_field('location')) {
+                        if (get_field('location') ?? null) {
+                            ?>
+                            <div class="sidebar__title grid-cols-2">Location:</div>
+                            <div class="sidebar__value grid-cols-2"><?=get_field('location')?></div>
+                            <?php
+                        }
+                    if (get_field('client') ?? null) {
                         ?>
-                        <div class="sidebar__title">Location:</div>
-                        <div class="sidebar__value"><?=get_field('location')?></div>
+                        <div class="sidebar__title grid-cols-2">Client:</div>
+                        <div class="sidebar__value grid-cols-2"><?=get_field('client')?></div>
                         <?php
                     }
-                    if (get_field('main_contractor')) {
+                    if (get_field('main_contractor') ?? null) {
                         ?>
-                        <div class="sidebar__title">Main Contractor:</div>
-                        <div class="sidebar__value"><?=get_field('main_contractor')?></div>
+                        <div class="sidebar__title grid-cols-2">Principal Contractor:</div>
+                        <div class="sidebar__value grid-cols-2"><?=get_field('main_contractor')?></div>
                         <?php
                     }
-                    if (get_field('project_value')) {
+                    if (get_field('objectives') ?? null) {
+                        ?>
+                        <div class="sidebar__title grid-cols-2">Objectives:</div>
+                        <div class="sidebar__value grid-cols-2"><?=cb_list(get_field('objectives'))?></div>
+                        <?php
+                    }
+                    if (get_field('solution') ?? null) {
+                        ?>
+                        <div class="sidebar__title grid-cols-2">Solution:</div>
+                        <div class="sidebar__value grid-cols-2"><?=cb_list(get_field('solution'))?></div>
+                        <?php
+                    }
+                    if (get_field('supporting_mfrs') ?? null) {
+                        ?>
+                        <div class="sidebar__title grid-cols-2">Supporting Manufacturers:</div>
+                        <div class="sidebar__value grid-cols-2"><?=cb_list(get_field('supporting_mfrs'))?></div>
+                        <?php
+                    }
+                    if (get_field('benefits') ?? null) {
+                        ?>
+                        <div class="sidebar__title grid-cols-2">Benefits:</div>
+                        <div class="sidebar__value grid-cols-2"><?=cb_list(get_field('benefits'))?></div>
+                        <?php
+                    }
+                    if (get_field('date_completed') ?? null) {
+                        ?>
+                        <div class="sidebar__title">Date Completed:</div>
+                        <div class="sidebar__value"><?=get_field('date_completed')?></div>
+                        <?php
+                    }
+                    if (get_field('project_duration') ?? null) {
+                        ?>
+                        <div class="sidebar__title">Project Duration:</div>
+                        <div class="sidebar__value"><?=get_field('project_duration')?></div>
+                        <?php
+                    }
+                    if (get_field('engineers_on_site') ?? null) {
+                        ?>
+                        <div class="sidebar__title">Engineers on Site:</div>
+                        <div class="sidebar__value"><?=get_field('engineers_on_site')?></div>
+                        <?php
+                    }
+                    if (get_field('project_value') ?? null) {
                         ?>
                         <div class="sidebar__title">Project Value:</div>
                         <div class="sidebar__value">&pound;<?=number_format(get_field('project_value'))?></div>
@@ -48,14 +96,6 @@ get_header();
                     }
                     ?>
                     </div>
-                    <?php
-                    if (get_field('disciplines')) {
-                        ?>
-                        <strong>Disciplines</strong>
-                        <?php
-                        echo cb_list(get_field('disciplines'));
-                    }
-                    ?>
                     <div class="text-center mt-4">
                         <a href="/contact/" class="btn btn-primary">Contact Us</a>
                     </div>
@@ -69,7 +109,7 @@ get_header();
             <?php
 
             $sector = get_the_terms(get_the_ID(), 'cssector')[0]->name ?? null ?: '';
-            $service = get_the_terms(get_the_ID(), 'csservice')[0]->name ?? null ?: '';
+            $service = implode(', ', wp_list_pluck( get_the_terms(get_the_ID(), 'csservice'), 'name') ) ?? null ?: '';
             ?>
         <div class="cs-sector">
             <div><strong>Sector:</strong> <?=$sector?></div>
