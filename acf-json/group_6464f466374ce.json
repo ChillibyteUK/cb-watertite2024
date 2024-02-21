@@ -123,6 +123,26 @@
             "new_lines": "br"
         },
         {
+            "key": "field_65d60f888a91d",
+            "label": "Supporting Specialists",
+            "name": "supporting_specialists",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_65d5c8d53a7f4",
             "label": "Benefits",
             "name": "benefits",
@@ -291,5 +311,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708516304
+    "modified": 1708527513
 }

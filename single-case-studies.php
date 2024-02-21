@@ -64,6 +64,12 @@ get_header();
                         <div class="sidebar__value grid-cols-2"><?=cb_list(get_field('supporting_mfrs'))?></div>
                         <?php
                     }
+                    if (get_field('supporting_specialists') ?? null) {
+                        ?>
+                        <div class="sidebar__title grid-cols-2">Supporting Specialists:</div>
+                        <div class="sidebar__value grid-cols-2"><?=cb_list(get_field('supporting_specialists'))?></div>
+                        <?php
+                    }
                     if (get_field('benefits') ?? null) {
                         ?>
                         <div class="sidebar__title grid-cols-2">Benefits:</div>
