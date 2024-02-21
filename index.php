@@ -14,7 +14,7 @@ get_header();
     <div class="container-xl">
         <div class="row">
             <div class="col-lg-8 py-5">
-                <h1>CPS News</h1>
+                <h1>Watertite News</h1>
             </div>
         </div>
     </div>
