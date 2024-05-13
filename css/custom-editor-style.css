@@ -11,7 +11,7 @@
   --col-blue-400: hsl( var(--hsl-blue-400) );
   --col-green-200: hsl( var(--hsl-green-200) );
   --col-green-300: hsl( var(--hsl-green-300) );
-  --col-green-400: hsl( var(--hsl-green-400) );
+  --col-green-400: #682124;
   --col-green-900: hsl( var(--hsl-green-900) );
   --col-grey-200: hsl( var(--hsl-grey-200) );
   --col-grey-400: hsl( var(--hsl-grey-400) );
@@ -122,10 +122,8 @@ p {
 }
 
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -2509,20 +2507,14 @@ progress {
 }
 
 .user-select-all {
-  -webkit-user-select: all !important;
-  -moz-user-select: all !important;
   user-select: all !important;
 }
 
 .user-select-auto {
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
   user-select: auto !important;
 }
 
 .user-select-none {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
   user-select: none !important;
 }
 
