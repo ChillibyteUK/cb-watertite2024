@@ -13,7 +13,7 @@ $bg = get_field('background_colour');
                     echo '<h2 class="text-blue-400 dot">' . get_field('title') . '</h2>';
                 }
                 if (get_field('subtitle')) {
-                    echo '<h3 class="text-green-400">' . get_field('subtitle') . '</h3>';
+                    echo '<h3 class="text-burgundy-400">' . get_field('subtitle') . '</h3>';
                 }
                 echo get_field('content');
                 if (get_field('cta')) {

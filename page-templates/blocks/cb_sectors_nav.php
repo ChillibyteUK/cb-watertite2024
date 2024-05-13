@@ -17,7 +17,7 @@
             ?>
             <a class="sectors__card" href="<?=get_the_permalink($s)?>">
                 <div class="img_container"><img src="<?=$img?>"></div>
-                <h3 class="fs-450 text-green-400"><?=get_the_title($s)?></h3>
+                <h3 class="fs-450 text-burgundy-400"><?=get_the_title($s)?></h3>
             </a>
             <?php
         }

@@ -7,7 +7,7 @@
 .btn-tx {
     background-color: hsl( var(--hsl-blue-900), 0.8);
     border: none;
-    color: var(--col-green-400);
+    color: white;
     text-transform: uppercase;
     font-size: var(--fs-400);
     font-weight: var(--fw-600);
@@ -37,8 +37,8 @@
 }
 
 .btn-primary {
-    background-color: var(--col-green-400);
-    border-color: var(--col-green-400);
+    background-color: var(--col-burgundy-400);
+    border-color: var(--col-burgundy-400);
     color: white;
     text-transform: uppercase;
     font-size: var(--fs-400);

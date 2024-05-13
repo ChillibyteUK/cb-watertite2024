@@ -27,7 +27,7 @@
     }
     li {
         
-        border: 1px solid var(--col-green-400);
+        border: 1px solid var(--col-burgundy-400);
         border-right: none;
         background-color: white;
         &.active {
@@ -44,7 +44,7 @@
         &:last-of-type {
             border-top-right-radius: 0.25rem;
             border-bottom-right-radius: 0.25rem;
-            border-right: 1px solid var(--col-green-400);
+            border-right: 1px solid var(--col-burgundy-400);
         }
     }
 
