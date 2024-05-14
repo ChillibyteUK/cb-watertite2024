@@ -22129,6 +22129,10 @@ footer .cb:hover {
   font-size: var(--fs-300);
 }
 
+.latest_cs {
+  background-color: var(--col-grey-200);
+}
+
 main {
   margin-top: var(--h-top);
 }
